@@ -13,9 +13,6 @@ accountCity = "up"
 // prefer not to use var becasuse of issue in block scope and functional scop
 
 
-console.log("accountId");
-
-console.table([accountId, accountEmail, accountCity, accountState])
-
+console.table([accountId, accountEmail, accountCity, acconsole])
 
 
