@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM learning</title>
+    <style>
+        .bg-dark{
+             background-color: #212121;
+             color: #fff;
+
+        }
+    </style>
+</head>
+<body style = "background-color: #212121; color: #fff">
+    
+    <ul class = "language">
+      <li>javascript</li>
+    </ul>
+    
+    
+    
+    
+    
+    
+    
+    <!--1 ///////////////////////////////////////////////// -->
+    
+    <!-- <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+      </div> -->
+
+
+<!---- ////////////////////////////////////////// -->
+
+
+
+    <!-- <div class="bg-dark">
+        <h1 id = "titel" class ="heading">DOM learning page <span style = "display: none;">test text</span></h1>
+        <h2>Lorem, ipsum dolor.</h2>
+        <h2 id = "titel2" class = "heading2">Lorem ipsum dolor sit </h2>
+        <h2 id = "titel3" class = "heading3">Lorem ipsum dolor sit amet.</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis, quasi.</p>
+        <input type="password" name = "" id = "">
+
+        <ul>
+            <li class = "list">one</li>
+            <li class = "list">two</li>
+            <li class = "list">three</li>
+            <li class = "list">four</li>
+        </ul>
+    </div>-->
+</body>
+<script>
+ 
+ function addLanguage(langName){
+   const li = document.createElement('li');
+   li.innerHTML = `${langName}`
+   document.querySelector('.language').
+   appendChild(li)
+ }
+  addLanguage("python")
+  addLanguage("html")
+  addLanguage("css")
+
+function addOptiLanguage(langName){
+    const li = document.createElement('li');
+    // type-1]] const addText = (document.createTextNode(langName))
+    li.appendChild(document.createTextNode(langName))
+    document.querySelector('.language').appendChild(li)
+
+}   
+addOptiLanguage('golang')
+
+// edit
+const secondLang = document.querySelector("li:nth-child(2)")
+// secondLang.innerHTML = "Mojo"
+const newli = document.createElement('li')
+newli.textContent = "Mojo"
+
+secondLang.replaceWith(newli)
+
+//edit
+const firstLang = document.querySelector("li:first-child")
+firstLang.outerHTML ='<li>TypeScript</li>'
+
+
+//remove
+const lastlang = document.querySelector('li:last-child')
+lastlang.remove()
+
+//2 ////////////////////////////////////////
+
+//   const div = document.createElement('div')
+//    console.log(div);
+//    div.className = "main"
+//    div.id = Math.round(Math.random() * 10 + 1)
+//    div.setAttribute("titel", "simran's code")
+//    div.style.backgroundColor = "pink"
+// //    div.innerText = "simran's code"
+
+//    const addText = document.createTextNode = document.createTextNode("SIMRAN'S CODE")
+//    div.appendChild(addText)
+
+
+//     document.body.appendChild(div)
+
+
+
+
+
+// 2 ///////////////////////////////////////////////
+
+
+
+    // const parent = document.querySelector('.parent')
+    // console.log(parent);
+    // console.log(parent.children);
+    // console.log(parent.children[1].innerHTML);
+    // for (let i = 0; i < parent.children.length; i++) {
+    //  console.log(parent.children[i].innerHTML);
+        
+    // }
+    // parent.children[1].style.color = "orange"
+    // console.log(parent.firstElementChild);
+    
+//    const dayOne = document.querySelector('.day')
+//    console.log(dayOne);
+//    console.log(dayOne.parentElement);
+//    console.log(dayOne.nextElementSibling);
+   
+//    console.log("NOODS;",parent.childNodes);
+   
+</script>
+</html>
